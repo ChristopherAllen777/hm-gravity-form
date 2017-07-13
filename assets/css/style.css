@@ -11,7 +11,7 @@ div.container-fluid {
     margin: 10px;
     margin-left: 70px;
     margin-right: 70px;
-    padding-bottom: 40px;
+    padding-bottom: 5px;
 }
 @media (max-width: 700px) {
     div.container-fluid {
@@ -21,6 +21,12 @@ div.container-fluid {
 h1{
     margin-bottom: 20px;
     font-size: 24px;
+}
+@media (max-width: 700px) {
+    h1 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    }
 }
 h1.voter {
     text-align: center;
@@ -34,14 +40,14 @@ img {
 }
 * p {
     color: white;
-    font-size: 10pt;
+    font-size: 11pt;
 }
 label {
     color: white;
     background-color:rgba(0,0,0,0) !important;
 }
 div.col-sm-5 {
-    padding-left: 50px;
+    padding-left: 70px;
 }
 #form {
     border:1px solid white;
@@ -49,7 +55,7 @@ div.col-sm-5 {
 #form{
     padding: 15px 39px;
     margin: 15px;
-    margin-left: 22px;
+    margin-left: 15px;
     border: 2px border-style white;
     
  }
