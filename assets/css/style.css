@@ -7,9 +7,12 @@ body {
   font-family: 'Tahoma', sans-serif;
   color: white;
 }
+div.container-fluid {
+    margin: 10px;
+}
 h1{
     margin-bottom: 20px;
-    text-size: 24px;
+    font-size: 24px;
 }
 p {
     color: white;
@@ -18,9 +21,14 @@ label {
     color: white;
     background-color:rgba(0,0,0,0) !important;
 }
+#form {
+    border:1px solid white;
+}
 #form{
-    padding: 20px;
+    padding: 15px 39px;
     margin: 15px;
+    border: 2px border-style white;
+    
  }
 .form-control {
     background-color: rgba(0,0,0,0) !important;
@@ -38,4 +46,12 @@ label {
     letter-spacing: 0.1em;
     margin-bottom: 10px;
 }
-
+footer {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+    clear: both;
+}
+.text-muted {
+    color: white;
+}
