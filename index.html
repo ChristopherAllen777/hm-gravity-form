@@ -9,18 +9,25 @@
     </head>
     <body>
 
-        <div class="container-fluid">
 
-        
 
-           <div class="row-marketing">
-                <div id ="form" class="col-sm-6">
-                    <h1>Let's get started with some basic voter information:</h1>
-                    <div class="controls">
+           <div class="row">
+
+               <div class="container-fluid">
+
+                <div id ="form" class="col-lg-6">
+
+                    <form id="contact-form" method="post" action="contact.php" role="form">
+                        
+                        <div class="message">
+
+                            <div class="controls">
+                        
 
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
+                                        <h1>Let's get started with some basic voter information:</h1>
                                         <label for="form_name">First Name</label>
                                         <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required.">
                                         <div class="help-block with-errors"></div>
@@ -72,12 +79,12 @@
 
                                 <div class="col-md-12">
                                     <input type="submit" class="btn btn-success btn-send" value="Send message >">
-                                     <!--<p><a class="btn btn-primary btn-lg" href="#" role="button">Send message ></a></p>-->
                                 </div>
                             </div>
-        
                         </div>
-        </div>
+                    </div>
+                </form>
+            </div> <!--id ="form" class="col-sm-6"-->
 
         <div class="col-lg-6">
           <img src="assets/images/nevadalogo.png" alt="Engage Nevada">
@@ -92,8 +99,8 @@
           <p>If you don't have a stat-issued ID, you can still register to vote using a paper form. Select "I dont't 
               have a current NV state identification card or driver's licence" and then click "Next Step" and we'll 
               take you to the Nevada Secretary of State website where you can print off your registration application.</p>
-        </div>
-      </div>
+        </div> <!-- col-lg-6 -->
+      </div> <!-- row -->
 
            <footer class="footer">
                 <div class="footertxt">
