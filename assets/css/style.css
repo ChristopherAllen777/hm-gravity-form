@@ -49,6 +49,7 @@ div.col-sm-5 {
 #form{
     padding: 15px 39px;
     margin: 15px;
+    margin-left: 22px;
     border: 2px border-style white;
     
  }
@@ -62,7 +63,7 @@ div.col-sm-5 {
     margin-bottom: 10px;
 }
 .btn-send {
-    background: red;
+    background: #b82d2d;
     font-weight: 200;
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -86,7 +87,10 @@ footer {
     color: #fff;
 }
 .btn-success {
-     color: #fff; 
-    background-color: red; 
-    border-color: red; 
+    color: #fff; 
+    background-color: #b82d2d; 
+    border-color: #b82d2d; 
+}
+.bt-success:hover {
+    background-color: gold;
 }
