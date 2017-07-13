@@ -49,16 +49,19 @@ label {
 div.col-sm-5 {
     padding-left: 70px;
 }
-#form {
-    border:1px solid white;
-}
 #form{
     padding: 15px 39px;
     margin: 15px;
     margin-left: 15px;
-    border: 2px border-style white;
-    
+    border:1px solid white;
  }
+ @media (max-width: 700px) {
+    #form {
+    padding: 0px 29px;
+    margin: 15px;
+    margin-left: 15px;
+    }
+}
 .form-control {
     background-color: rgba(0,0,0,0) !important;
     border-color: white;
