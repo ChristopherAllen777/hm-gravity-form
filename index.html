@@ -1,6 +1,8 @@
 <html>
     <head>
         <title>Chris Allen - Contact Form</title>
+        <!-- jQuery script -->
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
@@ -64,15 +66,15 @@
 
                                  <div class="col-md-12">
                                     <div class="checkbox">
-                                       <label><input class="checkbox-input" type="checkbox" class="form-control" value="">I HAVE A CURRENT NV STATE IDENTIFICATION CARD OR DRIVER'S LICENCE.</label>
-                                        <div class="help-block with-errors"></div>
+                                        <label>
+                                        <input type="checkbox" class="sev_check" name="chk1" />I HAVE A CURRENT NV STATE IDENTIFICATION CARD OR DRIVER'S LICENCE.</label>
                                     </div>
                                 </div>
 
                                  <div class="col-md-12">
                                     <div class="checkbox">
-                                       <label><input class="checkbox-input" type="checkbox" class="form-control" value="">I DO NOT HAVE A CURRENT NV STATE IDENTIFICATION CARD OR DRIVER'S LICENSE.</label>
-                                        <div class="help-block with-errors"></div>
+                                        <label>
+                                        <input type="checkbox" class="sev_check" name="chk2" />I DO NOT HAVE A CURRENT NV STATE IDENTIFICATION CARD OR DRIVER'S LICENSE.</label>
                                     </div>
                                 </div>
 
@@ -108,7 +110,12 @@
            </footer>
 
         </div> <!-- /.container-->
-
+        <script>
+            // Allows user to only make one selection using jQuery
+            $('.sev_check').click(function() {
+                $('.sev_check').not(this).prop('checked', false);
+            });
+        </script>
         <!-- Script Links -->
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
