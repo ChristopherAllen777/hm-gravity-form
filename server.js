@@ -8,6 +8,11 @@ var path = require("path");
 // =============================================================
 var app = express();
 var PORT = process.env.PORT || 8080;
+console.log(__dirname)
+
+// define the path to use style sheets & images - public folder
+app.use(express.static(path.join(__dirname, '/public')));
+
 
 // Sets up the Express app to handle data parsing
 app.use(bodyParser.json());
@@ -47,6 +52,7 @@ var characters = [{
 // Basic route that sends the user first to the AJAX Form Page
 app.get("/", function(req, res) {
   res.sendFile(path.join(__dirname, "index.html"));
+
 });
 
 // Get all form submissions
