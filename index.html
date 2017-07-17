@@ -51,8 +51,8 @@
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label for="form_phone">Zip</label>
-                                        <input id="form_phone" type="tel" name="zipcode" class="form-control" placeholder="Please enter your zipcode">
+                                        <label for="form_zip">Zip</label>
+                                        <input id="form_zip" type="tel" name="zipcode" class="form-control" placeholder="Please enter your zipcode">
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
@@ -68,14 +68,14 @@
                                  <div class="col-md-12">
                                     <div class="checkbox">
                                         <label>
-                                        <input type="checkbox" class="sev_check" name="chk1" />I HAVE A CURRENT NV STATE IDENTIFICATION CARD OR DRIVER'S LICENCE.</label>
+                                        <input id="chk1" type="checkbox" class="sev_check" name="chk1" value="yes" />I HAVE A CURRENT NV STATE IDENTIFICATION CARD OR DRIVER'S LICENCE.</label>
                                     </div>
                                 </div>
 
                                  <div class="col-md-12">
                                     <div class="checkbox">
                                         <label>
-                                        <input type="checkbox" class="sev_check" name="chk2" />I DO NOT HAVE A CURRENT NV STATE IDENTIFICATION CARD OR DRIVER'S LICENSE.</label>
+                                        <input id="chk2" type="checkbox" class="sev_check" name="chk2" value="no" />I DO NOT HAVE A CURRENT NV STATE IDENTIFICATION CARD OR DRIVER'S LICENSE.</label>
                                     </div>
                                 </div>
 
@@ -112,9 +112,28 @@
 
         </div> <!-- /.container-->
         <script>
-            // Allows user to only make one selection using jQuery
+            // Allows checkboxes to only make one selection using jQuery
             $('.sev_check').click(function() {
                 $('.sev_check').not(this).prop('checked', false);
+            });
+
+            // Question: What does this code do?
+            $("#submit").on("click", function(event) {
+                event.preventDefault();
+                var newCharacter = {
+                    name: $("#form_name").val().trim(),
+                    last: $("#form_lastname").val().trim(),
+                    email: $("#form_email").val().trim(),
+                    zip: $("#form_zip").val().trim(),
+                    driversLicense: $('input[name="chk"]:checked').val()
+                };
+
+            // Question: What does this code do??
+            $.post("/api/new", newCharacter)
+            .done(function(data) {
+                console.log(data);
+                alert("Adding submission...");
+                });
             });
         </script>
         <!-- Script Links -->

@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/ChristopherAllen777/hm-gravity-form/issues"
   },
-  "homepage": "https://github.com/ChristopherAllen777/hm-gravity-form#readme"
+  "homepage": "https://github.com/ChristopherAllen777/hm-gravity-form#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "path": "^0.12.7"
+  }
 }
